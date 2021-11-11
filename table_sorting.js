@@ -19,33 +19,10 @@ function compare(a, b) {
 }
 
 function getLongestName(array) {
-    array.filter()
+    let longest = array.reduce(
+      (previous, next) => previous.name.length > next.name.length ? previous : next
+    );
     return longest;
 }
 
-// Test
 
-let firstCompany = [];
-let secondCompany = [];
-
-let Ivan = new User(2, 'Ivan', 'admin');
-let Kate = new User(3, 'Kate', 'admin');
-let Slava = new User(8, 'Slava', 'admin');
-let Ihor = new User(12, 'Ihor', 'surfer');
-
-firstCompany.push(new User(1, 'John', 'admin'));
-firstCompany.push(Ivan);
-secondCompany.push(Kate);
-secondCompany.push(Ivan);
-firstCompany.push(new User(4, 'Marek', 'surfer'));
-firstCompany.push(new User(5, 'Alex', 'surfer'));
-firstCompany.push(Kate);
-secondCompany.push(new User(6, 'Vito', 'surfer'));
-firstCompany.push(Slava);
-secondCompany.push(Ihor);
-secondCompany.push(Slava);
-firstCompany.push(Ihor);
-
-
-let result = sorting(firstCompany, secondCompany);
-console.log(getLongestName(result));
