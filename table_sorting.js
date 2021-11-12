@@ -22,7 +22,7 @@ function getLongestName(array) {
     let longest = array.reduce(
       (previous, next) => previous.name.length > next.name.length ? previous : next
     );
-    return longest;
+    return longest.name;
 }
 
 
